@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiaxian Wang (王嘉贤) | 个人主页</title>
+<meta name="description" content="UESTC 本科生，研究磁驱动机器人">
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #3fb950;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  header {
+    padding: 80px 0 60px;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 20%, rgba(88,166,255,.12), transparent),
+      radial-gradient(ellipse 50% 40% at 20% 80%, rgba(63,185,80,.08), transparent);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+  .avatar {
+    width: 140px; height: 140px; border-radius: 50%;
+    border: 3px solid var(--accent); padding: 4px; flex-shrink: 0;
+  }
+  .avatar img { width: 100%; height: 100%; border-radius: 50%; display: block; }
+  h1 { font-size: 2.2rem; margin-bottom: 6px; }
+  .hero .en { color: var(--muted); font-size: 1.05rem; margin-bottom: 14px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .tag {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 4px 14px; border-radius: 999px; font-size: .85rem; color: var(--muted);
+  }
+  .stats { display: flex; gap: 28px; margin-top: 20px; color: var(--muted); font-size: .9rem; }
+  .stats b { color: var(--text); font-size: 1.1rem; display: block; }
+
+  /* Sections */
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  h2 {
+    font-size: 1.4rem; margin-bottom: 28px; display: flex; align-items: center; gap: 12px;
+  }
+  h2::before { content: ""; width: 4px; height: 22px; background: var(--accent); border-radius: 2px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 22px; transition: transform .2s, border-color .2s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: .92rem; flex-grow: 1; }
+  .card .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; font-size: .82rem; color: var(--muted); }
+  .lang { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .cpp { background: #f34b7d; } .python { background: #3572A5; } .c { background: #555; } .other { background: #8b949e; }
+
+  .skills li {
+    list-style: none; background: var(--card); border: 1px solid var(--border);
+    padding: 12px 18px; border-radius: 8px; margin-bottom: 10px;
+  }
+  .skills li::before { content: "▸ "; color: var(--accent2); }
+
+  .contact a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 22px; margin: 0 12px 12px 0; transition: border-color .2s;
+  }
+  .contact a:hover { border-color: var(--accent); text-decoration: none; }
+
+  footer { padding: 32px 0; text-align: center; color: var(--muted); font-size: .85rem; }
+
+  @media (max-width: 640px) {
+    .hero { flex-direction: column; text-align: center; }
+    .tags, .stats { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container hero">
+    <div class="avatar">
+      <img src="https://avatars.githubusercontent.com/u/141382414" alt="Jiaxian Wang">
+    </div>
+    <div>
+      <h1>王嘉贤 <span style="color:var(--muted);font-weight:400;font-size:1.2rem;">Jiaxian Wang</span></h1>
+      <p class="en">UESTC 本科生 · 磁驱动机器人方向</p>
+      <p style="color:var(--muted);max-width:560px;">
+        电子科技大学在读本科生，主要研究方向为磁驱动机器人（磁控微型机器人 / Magnetically Actuated Robots），
+        同时积极参与机器人竞赛与嵌入式开发，热爱用代码和硬件解决实际问题。
+      </p>
+      <div class="tags">
+        <span class="tag">📍 四川</span>
+        <span class="tag">🎓 电子科技大学 (UESTC)</span>
+        <span class="tag">🤖 磁驱动机器人</span>
+        <span class="tag">💻 C++ / Python / STM32</span>
+      </div>
+      <div class="stats">
+        <div><b>9+</b>公开仓库</div>
+        <div><b>机器人</b>研究方向</div>
+        <div><b>竞赛</b>raicom 智慧识果赛道</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>🚀 项目与仓库</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/HansomeWang2154/raicom" target="_blank">raicom</a></h3>
+        <p>raicom 机器人开发者大赛「智慧识果」赛道参赛代码，实现果实的智能识别与分拣。</p>
+        <div class="meta"><span class="lang"><span class="dot cpp"></span>C++</span><span>⭐ 1</span></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/HansomeWang2154/raicom_stm32" target="_blank">raicom_stm32</a></h3>
+        <p>raicom 大赛的 STM32 嵌入式底层代码，负责电机控制与传感器数据采集。</p>
+        <div class="meta"><span class="lang"><span class="dot c"></span>C</span><span>嵌入式</span></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/HansomeWang2154/deep-reinforcement-learning" target="_blank">deep-reinforcement-learning</a></h3>
+        <p>使用 PyTorch 实现的深度强化学习算法集合，覆盖 DQN、Policy Gradient 等经典方法。</p>
+        <div class="meta"><span class="lang"><span class="dot python"></span>Python</span><span>PyTorch</span></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/HansomeWang2154/Factory_security_inspection" target="_blank">Factory_security_inspection</a></h3>
+        <p>机器人传感检测课程作业：工厂安防巡检机器人的感知与检测方案。</p>
+        <div class="meta"><span class="lang"><span class="dot python"></span>Python</span><span>课程项目</span></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/HansomeWang2154/smart_robot" target="_blank">smart_robot</a></h3>
+        <p>智能机器人相关工程代码与实验记录。</p>
+        <div class="meta"><span class="lang"><span class="dot other"></span>—</span><span>机器人</span></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/HansomeWang2154?tab=repositories" target="_blank">更多仓库 →</a></h3>
+        <p>访问我的 GitHub 主页查看全部公开仓库。</p>
+        <div class="meta"><span class="lang"><span class="dot other"></span>GitHub</span><span>9 repos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>🛠 技能栈</h2>
+    <ul class="skills">
+      <li><b>编程语言</b>：C / C++（竞赛与嵌入式开发）、Python（算法与机器学习）</li>
+      <li><b>机器人方向</b>：磁驱动机器人、机器人感知与检测、智慧识果（视觉分拣）</li>
+      <li><b>嵌入式</b>：STM32 开发、电机控制、传感器数据采集</li>
+      <li><b>机器学习</b>：PyTorch、深度强化学习（DQN、Policy Gradient 等）</li>
+      <li><b>工具链</b>：Git / GitHub、Linux、ROS（学习中）</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>📮 联系我</h2>
+    <div class="contact">
+      <a href="https://github.com/HansomeWang2154" target="_blank">🐙 GitHub：@HansomeWang2154</a>
+      <a href="https://github.com/HansomeWang2154?tab=followers" target="_blank">🎓 UESTC 电子科技大学</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Jiaxian Wang · 基于 GitHub 公开信息构建 ·
+    <a href="https://github.com/HansomeWang2154/HansomeWang2154.github.io" target="_blank">查看本站源码</a>
+  </div>
+</footer>
+
+</body>
+</html>
